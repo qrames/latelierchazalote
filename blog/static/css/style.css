@@ -1,0 +1,75 @@
+body {
+  min-height: 100vh;
+  font-family: cursive;
+}
+
+.overlay {
+  position: relative;
+  top: 50%;
+  right: -50%;
+}
+
+#welcomeImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  transition: top 1s;
+}
+#welcomeImage > div {
+  height: 100vh;
+  min-width: 150vh;
+}
+#welcomeImage > div > div {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-image: url("../../static/img/logo_charlotte.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#welcomeImage > div > div > h1 {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h1 {
+  text-align: center;
+  color: #e09626;
+  font-size: 4rem;
+}
+
+#welcomeMenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+#welcomeMenu > div {
+  padding-top: 24vh;
+}
+#welcomeMenu > div > a {
+  vertical-align: middle;
+  color: #2a251e;
+}
+#welcomeMenu > div.c1 {
+  background: #c18e39;
+}
+#welcomeMenu > div.c2 {
+  background: #e4ad50;
+}
+#welcomeMenu > div.c3 {
+  background: #b69255;
+}
+#welcomeMenu > div.c4 {
+  background: #875605;
+}
+
+/*# sourceMappingURL=style.css.map */

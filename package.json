@@ -1,0 +1,29 @@
+{
+  "name": "latelierchazalote",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrames/latelierchazalote.git"
+  },
+  "keywords": [
+    "atelier",
+    "couture",
+    "sur-mesure",
+    "costume"
+  ],
+  "author": "Quentin Rames",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qrames/latelierchazalote/issues"
+  },
+  "homepage": "https://github.com/qrames/latelierchazalote#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "uikit": "^3.0.0-rc.16"
+  }
+}

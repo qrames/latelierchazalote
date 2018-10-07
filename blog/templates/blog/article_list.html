@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+
+{% block body %}
+
+    {% include "blog/header.html" %}
+
+    <h1>Liste des articles</h1>
+    {% for article in object_list%}
+        {% include "blog/article.html" %}
+    {% endfor %}
+
+    {% include "blog/footer.html" %}
+
+{% endblock body %}
