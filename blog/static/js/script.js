@@ -3,11 +3,10 @@ $(document).ready(function() {
     $('#welcomeImage').click(function(event) {
         $(this).css('top', '-100vh');
     });
-    $('.menu-bar').click(function(event) {
+    $('.menu-bar').on('click',function(event) {
         $('nav').addClass('deploy');
     });
-    $('header').hover(function(event) {
+    $('header').on('mouseleave', function(event) {
         $('nav').removeClass('deploy');
     });
-
 });

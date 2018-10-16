@@ -21,15 +21,23 @@
 </head>
 
 <body>
-    {% block body %}
+    {% block header %}
+    {% endblock %}
+    <div class="content">
+    {% block main %}
 
     {% endblock %}
+    {% block footer %}
+    {% endblock %}
+    </div>
     <!-- jquery -->
     <script type="text/javascript" src={% static "jquery/dist/jquery.min.js" %}></script>
     <!-- external script -->
     <script type="text/javascript" src={% static "uikit/dist/js/uikit.min.js" %}></script>
     <!-- my script -->
     <script type="text/javascript" src={% static "js/script.js" %}></script>
+    {% block script %}
+    {% endblock %}
 </body>
 
 </html>

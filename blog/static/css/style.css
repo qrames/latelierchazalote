@@ -8,6 +8,11 @@ body {
   font-family: 'Mali', cursive;
 }
 
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 h1 {
   width: 100vw;
   text-align: center;
@@ -93,9 +98,11 @@ nav {
   background-position: center;
   height: 200px;
   width: 100vw;
+  overflow: hidden;
   min-width: 400px;
   display: flex;
   justify-content: space-between;
+  transition: min-width 2s;
 }
 nav > img {
   height: 100%;
@@ -111,11 +118,12 @@ nav.deploy .menu-bar {
 }
 nav > ul {
   padding: 0 0 0 1rem;
-  background: rgba(51, 20, 4, 0.43);
+  background: rgba(51, 20, 4, 0.8);
   width: 100%;
   height: 100%;
 }
 nav > ul > li {
+  transition-delay: 0.5s;
   visibility: hidden;
   list-style: none;
   font-size: 1.5rem;
