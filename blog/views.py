@@ -14,5 +14,19 @@ class IndexView(TemplateView):
     # template_name = "blog/activity.html"
     # test test test
 
+
 class ArticleView(ListView):
     model = Article
+
+class CourDeCouture(ArticleView):
+    template_name = "blog/cour-de-couture.html"
+
+
+class CostumesDeScenes(ArticleView):
+    pass
+
+class CreetionSurMesures(ArticleView):
+    pass
+
+class atelierDeCreetion(ArticleView):
+    pass

@@ -1,6 +1,23 @@
 body {
   min-height: 100vh;
-  font-family: cursive;
+  font-family: 'Mali', cursive;
+  overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #E09526;
+  font-family: 'Codystar', cursive;
+  background: #202020;
+  line-height: 1.6em;
+  margin: 0 0 1rem 0;
+  font-size: 2.8em !important;
+  letter-spacing: 0.2em;
+}
+@media (min-width: 600px) {
+  h1 {
+    font-size: 1.2em;
+  }
 }
 
 .overlay {
@@ -23,26 +40,19 @@ body {
 #welcomeImage > div > div {
   position: absolute;
   top: 50vh;
-  left: 50vw;
+  left: 0px;
+  transform: translate(0, -50%);
   margin: auto;
-  transform: translate(-50%, -50%);
-  height: 80vh;
-  max-width: 400px;
-  background-color: rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  max-width: 200px;
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 0.7;
   background-image: url("../../static/img/logo_charlotte.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-}
-#welcomeImage > div > div > h1 {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-h1 {
-  text-align: center;
-  color: #e09626;
-  font-size: 4rem;
 }
 
 #welcomeMenu {
@@ -57,19 +67,87 @@ h1 {
 }
 #welcomeMenu > div > a {
   vertical-align: middle;
-  color: #2a251e;
+  color: #FFFDFA;
 }
 #welcomeMenu > div.c1 {
-  background: #c18e39;
+  background: #E09526;
 }
 #welcomeMenu > div.c2 {
-  background: #e4ad50;
+  background: #FFCD83;
 }
 #welcomeMenu > div.c3 {
-  background: #b69255;
+  background: #9B5D00;
 }
 #welcomeMenu > div.c4 {
-  background: #875605;
+  background: #3E2500;
+}
+
+nav {
+  background-image: url("../img/tissue.JPG");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 100vw;
+  min-width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+nav > img {
+  height: 100%;
+}
+nav > ul {
+  padding: 0 0 0 1rem;
+  background: rgba(51, 20, 4, 0.43);
+  width: 100%;
+  height: 100%;
+}
+nav > ul > li {
+  visibility: hidden;
+  list-style: none;
+  font-size: 1.5rem;
+}
+nav > ul > li > a {
+  color: white;
+  border-bottom: solid #E09526;
+}
+nav > ul > li > a:hover {
+  color: white;
+}
+nav > ul > .menu-bar {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+nav > ul > .menu-bar i {
+  color: #FFFDFA !important;
+}
+@media (min-width: 600px) {
+  nav .menu-bar {
+    display: none;
+  }
+  nav ul {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav ul > li {
+    visibility: visible;
+  }
+}
+@media (min-width: 800px) {
+  nav ul {
+    grid-template-areas: "a b" "c d";
+  }
+}
+@media (min-width: 1300px) {
+  nav ul {
+    min-width: 750px;
+    grid-auto-flow: column;
+    grid-template-areas: "a b c d";
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,1 +1,4 @@
 /node_modules/
+*.pyc
+/media/
+/blog/static/img/

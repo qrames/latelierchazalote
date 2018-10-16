@@ -5,16 +5,14 @@
 <div id="welcomeImage" >
     <div class="uk-overflow-hidden">
         <img src="../static/img/IMG_6538.JPG" alt="welcome-image" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
-        <div class="uk-overlay uk-overlay-default uk-position-center">
-            <h1>
-                Bienvenue à L'Atelier ChaZalote
-            </h1>
+        <div class="uk-overlay">
+            <img src="" alt="">
         </div>
     </div>
 </div>
 <div id="welcomeMenu">
     <div class="c1">
-        <a href="#">Cours de couture</a>
+        <a href={% url 'cour-de-couture' %}>Cours de couture</a>
     </div>
     <div class="c2">
         <a href="#">Costumes de scènes</a>

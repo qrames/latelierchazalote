@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+
+{% block body %}
+    <header>
+        {% include "blog/header.html" %}
+    </header>
+
+    <h1>cours de couture</h1>
+
+    {% include "blog/article_list.html" %}
+
+    {% include "blog/footer.html" %}
+
+{% endblock body %}
