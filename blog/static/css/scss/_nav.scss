@@ -13,6 +13,16 @@ nav{
         height: 100%;
     }
 
+    &.deploy {
+        min-width: 800px;
+        > ul > li {
+            visibility: visible
+        }
+        .menu-bar {
+            display: none;
+        }
+
+    }
     > ul{
         padding: 0 0 0 1rem;
         background: rgba(51, 20, 4, 0.43);
