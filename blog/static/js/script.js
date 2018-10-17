@@ -9,4 +9,6 @@ $(document).ready(function() {
     $('header').on('mouseleave', function(event) {
         $('nav').removeClass('deploy');
     });
+
+    $('#formset div').formset();
 });

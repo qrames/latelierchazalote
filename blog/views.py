@@ -5,7 +5,10 @@ from django.shortcuts import render
 
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView
 
-from .models import Article
+from extra_views import InlineFormSet, CreateWithInlinesView
+from extra_views.generic import GenericInlineFormSet
+
+from .models import Article, Image
 # Create your views here.
 
 class IndexView(TemplateView):
@@ -13,6 +16,19 @@ class IndexView(TemplateView):
     # test test test
     # template_name = "blog/activity.html"
     # test test test
+
+class ImageInLine(InlineFormSet):
+    model = Image
+    fields = "__all__"
+
+
+class ArticleFormSetView(CreateWithInlinesView):
+    model = Article
+    success_url = '/article'
+    inlines = [
+        ImageInLine,
+    ]
+    fields = "__all__"
 
 
 class ArticleView(ListView):

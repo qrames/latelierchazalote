@@ -8,5 +8,9 @@ class Image(models.Model):
     image = models.ImageField(upload_to='imageArticle')
     fk_article = models.ForeignKey('Article', on_delete=models.CASCADE)
 
+
 class Article(models.Model):
     title = models.CharField(max_length = 200)
+
+    def __unicode__(self):
+        return self.title

@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
 
-from blog.views import IndexView, CourDeCouture, CostumesDeScenes, CreetionSurMesures, atelierDeCreetion
+from blog.views import IndexView, CourDeCouture, CostumesDeScenes, CreetionSurMesures, atelierDeCreetion, ArticleFormSetView
 
 
 
@@ -38,6 +38,10 @@ urlpatterns = [
     url(r'^costumes-de-scenes/$', CostumesDeScenes.as_view(), name="costumes-de-scenes"),
     url(r'^creetion-sur-mesures/$', CreetionSurMesures.as_view(), name="creetion-sur-mesures"),
     url(r'^atelier-de-creetion/$', atelierDeCreetion.as_view(), name="atelier-de-creetion"),
+
+    url(r'^article/add/$',
+        ArticleFormSetView.as_view(),
+        name="add-article"),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

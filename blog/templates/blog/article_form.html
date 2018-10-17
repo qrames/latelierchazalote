@@ -1,0 +1,59 @@
+{% extends "blog/base.html" %}
+{% block header %}
+
+
+
+    <header>
+        {% include "blog/header.html" %}
+    </header>
+    <h1>***ajouter un article***</h1>
+
+{% endblock %}
+{% block main %}
+
+<form class="" action="." method="post"  enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ formset.management_form }}
+    <fieldset>
+        <label for="">titre :</label>
+        {{form.title}}
+    </fieldset>
+    <fieldset>
+        <label for="">page d'affichage de l'article :</label>
+    </fieldset>
+    <fieldset>
+        <label for="">Style d'affichage de l'article :</label>
+        <select class="" name="style">
+            <option value="article-primary">1er niveau</option>
+            <option value="article-secondary">2ème niveau</option>
+            <option value="article-default" selected="selected">style par default</option>
+
+        </select>
+    </fieldset>
+    <fieldset>
+        <label for="">text :</label>
+    </fieldset>
+    {% for formset in inlines %}
+    {{ formset.management_form }}
+    <fieldset id="formset">
+        <label for="formset">liste des images de l'article</label>
+        {% for form in formset %}
+        <div id="{{ form.prefix }}-row">
+            {{form.image}}
+        </div>
+        {% endfor %}
+        {% endfor %}
+    </fieldset>
+    <button type="submit" class="" name="submit">enregistrer</button>
+
+</from>
+{% endblock main %}
+{% block footer %}
+
+
+
+    {% include "blog/footer.html" %}
+
+
+
+{% endblock %}
