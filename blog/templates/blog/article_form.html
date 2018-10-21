@@ -20,18 +20,23 @@
     </fieldset>
     <fieldset>
         <label for="">page d'affichage de l'article :</label>
+        <select class="" name="page">
+            {%for value, texte in page_choices %}
+            <option value="{{ value }}">{{ texte }}</option>
+            {% endfor %}
+        </select>
     </fieldset>
     <fieldset>
         <label for="">Style d'affichage de l'article :</label>
         <select class="" name="style">
-            <option value="article-primary">1er niveau</option>
-            <option value="article-secondary">2ème niveau</option>
-            <option value="article-default" selected="selected">style par default</option>
-
+            {%for value, text in style_choices %}
+            <option value="{{ value }}">{{ texte }}</option>
+            {% endfor %}
         </select>
     </fieldset>
     <fieldset>
-        <label for="">text :</label>
+        <label for="">texte :</label>
+        {{form.text}}
     </fieldset>
     {% for formset in inlines %}
     {{ formset.management_form }}

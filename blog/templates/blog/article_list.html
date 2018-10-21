@@ -1,3 +1,31 @@
-{% for article in object_list%}
-    {% include "blog/article.html" %}
-{% endfor %}
+{% extends "blog/base.html" %}
+{% block header %}
+
+    <header>
+        {% include "blog/header.html" %}
+    </header>
+    <h1>cours de couture</h1>
+
+
+
+{% endblock %}
+{% block main %}
+
+
+
+    {% for article in object_list%}
+        {% include "blog/article.html" %}
+    {% endfor %}
+
+
+
+{% endblock main %}
+{% block footer %}
+
+
+
+    {% include "blog/footer.html" %}
+
+
+
+{% endblock %}

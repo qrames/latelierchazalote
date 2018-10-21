@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
+from password import superuser
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -25,7 +25,7 @@ SECRET_KEY = 'djnu0oe)6089x%vrc(^&6*ii4sbrqlde&j17f*1#*7s45p0@z6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ ]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'db',
-        'USER': 'superuser',
-        'PASSWORD': 'admin',
+        'USER': superuser.db_user,
+        'PASSWORD': superuser.db_passw,
     }
 }
 
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr-fr'
 
 TIME_ZONE = 'UTC'
 

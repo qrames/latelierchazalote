@@ -21,8 +21,8 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
 
-from blog.views import IndexView, CourDeCouture, CostumesDeScenes, CreetionSurMesures, atelierDeCreetion, ArticleFormSetView
-
+from blog.views import IndexView, ArticleView
+from blog.views import  ArticleFormSetView
 
 
 urlpatterns = [
@@ -34,10 +34,7 @@ urlpatterns = [
     # from views.py :
     url(r'^$', IndexView.as_view(), name="index"),
 
-    url(r'^cour-de-couture/$', CourDeCouture.as_view(), name="cour-de-couture"),
-    url(r'^costumes-de-scenes/$', CostumesDeScenes.as_view(), name="costumes-de-scenes"),
-    url(r'^creetion-sur-mesures/$', CreetionSurMesures.as_view(), name="creetion-sur-mesures"),
-    url(r'^atelier-de-creetion/$', atelierDeCreetion.as_view(), name="atelier-de-creetion"),
+    url(r'^(?P<page>[-\w]+)$', ArticleView.as_view(), name="article"),
 
     url(r'^article/add/$',
         ArticleFormSetView.as_view(),

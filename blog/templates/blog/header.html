@@ -1,10 +1,12 @@
 <nav>
     <ul>
         <div class="menu-bar"><i class="fas fa-bars"></i></div>
-        <li><a href={% url "cour-de-couture" %}>cours de couture</a></li>
-        <li><a href={% url "costumes-de-scenes" %}>costumes de scènes</a></li>
-        <li><a href={% url "creetion-sur-mesures" %}>créetion sur mesures</a></li>
-        <li><a href={% url "atelier-de-creetion" %}>atelier de créetion</a></li>
+        <li><a href={% url "article" "cour-de-couture" %}>cours de couture</a></li>
+        <li><a href={% url "article" "costumes-de-scenes" %}>costumes de scènes</a></li>
+        <li><a href={% url "article" "creetion-sur-mesures" %}>créetion sur mesures</a></li>
+        <li><a href={% url "article" "atelier-de-creetion" %}>atelier de créetion</a></li>
     </ul>
-    <img src="../../static/img/pret-a-porter.jpg" alt="contact">
+    <a href={% url "article" "qui-suis-je" %}>
+        Qui Suis-je?
+    </a>
 </nav>
