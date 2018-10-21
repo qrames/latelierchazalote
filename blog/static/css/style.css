@@ -107,7 +107,7 @@ nav {
 nav > a {
   height: 100%;
   min-width: 270.16886px;
-  background-image: url("../../static/img/pret-a-porter.jpg");
+  background: linear-gradient(rgba(32, 32, 32, 0.3), #202020), url("../../static/img/pret-a-porter.jpg");
   background-size: contain;
   text-align: center;
   line-height: 180px;
@@ -169,6 +169,7 @@ nav > ul > .menu-bar i {
   }
   nav ul > li {
     visibility: visible;
+    width: 100%;
   }
 }
 @media (min-width: 800px) {

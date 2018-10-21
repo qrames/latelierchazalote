@@ -15,7 +15,8 @@ nav{
         //1600 * 1066
         height: 100%;
         min-width: (1600/1066)*180px;
-        background-image: url('../../static/img/pret-a-porter.jpg');
+        background: linear-gradient(rgba(32, 32, 32, 0.3),rgba(32, 32, 32, 1))
+        ,url('../../static/img/pret-a-porter.jpg');
         background-size: contain;
         text-align: center;
         line-height: 180px;
@@ -77,6 +78,7 @@ nav{
             align-items: center;
             > li{
                 visibility: visible;
+                width: 100%;
             }
 
         }
